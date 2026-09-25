@@ -1,11 +1,11 @@
 # ROCKET STORES
 
-ROCKET STORES is a premium futuristic software marketplace built as a static website for GitHub Pages and Telegram Web Apps.
+ROCKET STORES is a static customer storefront served by Rocket.Api from the Rocket Platform host. It is also compatible with Telegram Web Apps when the operator registers the same public HTTPS storefront URL with a real Telegram bot.
 
 ## Features
 - Responsive design optimized for Telegram, mobile, and desktop
 - Dark mode first with glassmorphism and smooth motion
-- Dynamic app catalog loaded from data/apps.json
+- Presentation metadata loaded from data/apps.json and authoritative product/version/plan data loaded from the same-origin Rocket.Api
 - Live search and category filtering
 - Product detail pages and Telegram Web App SDK hooks
 
@@ -22,7 +22,8 @@ ROCKET STORES is a premium futuristic software marketplace built as a static web
 ## Run locally
 Open index.html directly in a browser or serve the folder with any static server.
 
-## Deploy to GitHub Pages
-1. Upload the contents of this folder to your GitHub repository.
-2. Enable GitHub Pages for the repository.
-3. Publish from the root of the main branch.
+## Production deployment
+
+Deploy the contents of this folder to the existing `Storefront:RootPath` on the current Rocket Platform host. Rocket.Api serves the files and the API from the same configured HTTPS origin; keep `js/config.js` same-origin unless the approved deployment explicitly requires another public API origin. Do not deploy the Store Web files to a separate public hosting architecture for the production flow.
+
+The repository contains Telegram Web App SDK hooks in `js/telegram.js`. A real bot token, webhook secret, bot registration, and public Mini App URL are operator-supplied external configuration; none belong in these files.

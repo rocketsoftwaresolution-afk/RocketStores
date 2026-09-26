@@ -17,8 +17,7 @@ body {
   font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
   background:
     radial-gradient(circle at top left, rgba(45, 127, 249, 0.18), transparent 28%),
-    linear-gradient(135deg, var(--bg), #03060c 85%),
-    url("images/backgrounds/ambient.png");
+    linear-gradient(135deg, var(--bg), #03060c 85%);
   background-size: cover;
   color: var(--text);
   min-height: 100vh;

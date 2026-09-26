@@ -1,50 +1,13 @@
 [
   {
     "id": "win11-maintenance-pro",
-    "name": "Win11 Maintenance Pro",
-    "version": "4.5.0",
     "description": "A complete Windows maintenance and optimization suite for performance tuning, cleanup, and system care.",
     "category": "Utilities",
     "tags": ["Windows", "Maintenance", "Optimization"],
     "icon": "images/logo.png",
     "image": "images/banner-wide.png",
-    "downloadUrl": "details.html?id=win11-maintenance-pro",
-    "detailsUrl": "details.html?id=win11-maintenance-pro",
-    "releaseDate": "2026-07-18",
     "featured": true,
     "features": ["System cleanup", "Performance tuning", "Maintenance automation"],
     "requirements": ["Windows 10+", "4 GB RAM", "Administrator access"]
-  },
-  {
-    "id": "win11-maintenance-pro-license-generator",
-    "name": "Win11 Maintenance Pro License Generator",
-    "version": "1.0.0",
-    "description": "A licensing companion tool for generating and managing Win11 Maintenance Pro license workflows.",
-    "category": "Tools",
-    "tags": ["License", "Generator", "Activation"],
-    "icon": "images/logo.png",
-    "image": "images/banner-wide.png",
-    "downloadUrl": "details.html?id=win11-maintenance-pro-license-generator",
-    "detailsUrl": "details.html?id=win11-maintenance-pro-license-generator",
-    "releaseDate": "2026-07-18",
-    "featured": true,
-    "features": ["License generation", "Workflow support", "Secure output handling"],
-    "requirements": ["Windows 10+", "2 GB RAM", "Administrator access"]
-  },
-  {
-    "id": "win11-maintenance-pro-license-tool",
-    "name": "Win11 Maintenance Pro License Tool",
-    "version": "1.0.0",
-    "description": "A practical utility for validating, organizing, and working with license assets for the Win11 Maintenance Pro product line.",
-    "category": "Tools",
-    "tags": ["License", "Utility", "Activation"],
-    "icon": "images/logo.png",
-    "image": "images/banner-wide.png",
-    "downloadUrl": "details.html?id=win11-maintenance-pro-license-tool",
-    "detailsUrl": "details.html?id=win11-maintenance-pro-license-tool",
-    "releaseDate": "2026-07-18",
-    "featured": true,
-    "features": ["License validation", "Asset organization", "Fast activation support"],
-    "requirements": ["Windows 10+", "2 GB RAM", "Administrator access"]
   }
 ]

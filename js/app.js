@@ -1,7 +1,6 @@
 // Core app bootstrapping and data loading for the static marketplace.
 const state = {
-  apps: [],
-  categories: ["AI", "Trading", "Network", "Security", "Utilities", "Productivity", "Tools"]
+  apps: []
 };
 const apiBaseUrl = window.RocketStoresConfig?.apiBaseUrl || "";
 const checkoutState = { attempts: 0, maxAttempts: 24, timer: null };
@@ -55,7 +54,7 @@ async function loadApps() {
       const version = versions.items?.[0] || {};
       return { ...presentation, id: product.productId, slug: product.slug, name: product.name, category: presentation.category || "Software", tags: Array.isArray(presentation.tags) ? presentation.tags : [], features: Array.isArray(presentation.features) ? presentation.features : [], requirements: Array.isArray(presentation.requirements) ? presentation.requirements : [], version: version.versionString || "Unpublished", description: product.description || presentation.description || "", detailsUrl: `details.html?id=${encodeURIComponent(product.productId)}`, releaseDate: version.publishedAt || product.updatedAt, productId: product.productId, versionId: version.productVersionId || null, plans };
     }));
-    state.apps = catalogApps.filter((app) => app.plans.length > 0);
+    state.apps = catalogApps.filter((app) => app.plans.length > 0 && app.versionId);
     initializeHomePage();
     initializeSearchPage();
     initializeDetailsPage();
@@ -161,7 +160,8 @@ function initializeHomePage() {
   newestApps.replaceChildren();
   categoriesGrid.replaceChildren();
 
-  state.categories.forEach((category) => {
+  const categories = [...new Set(state.apps.map((app) => app.category))];
+  categories.forEach((category) => {
     const categoryCard = document.createElement("div");
     categoryCard.className = "category-card";
     const iconMap = {
